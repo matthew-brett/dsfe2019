@@ -24,10 +24,25 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
         "teaser":null},{
+        "title": "1.8 More on the Jupyter notebook",
+        "excerpt":"As you heard in about the software, Jupyter is an interface that allows you to run Python code and see the results. It consists of two parts: The web client (the thing you are looking at now, if you are running thisnotebook in Jupyter); The kernel (that does the work...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/more_on_jupyter",
+        "teaser":null},{
         "title": "1.3.2 Statistical techniques",
         "excerpt":"Statistical Techniques Modern data analysis involves techniques from several fields, includingstatistics and machine learning. Statistics is the body of knowledge about drawing conclusions from incompleteinformation. Put another way, statistics allows us to reason about data inthe presence of uncertainty. Among the statistical tools that we will use are hypothesis testing...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/statistical-techniques",
+        "teaser":null},{
+        "title": "1.5 Surviving the computer",
+        "excerpt":"Computers have vastly extended the range of tasks we can do, in data analysis,as for many other fields. But, they can be awkward partners, because we haveto use some of our mental energy to communicate with the computer. This means that, if we are not careful, the computer can make...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/surviving_computers",
+        "teaser":null},{
+        "title": "1.6 About the software",
+        "excerpt":"The parts You have already jumped into the technology, but now we step back and name theparts. You have been working in the Jupyter Notebook. This is an interface that allows us to interact with the Python programming language. There are many ways of installing Python and the Jupyter Notebook....","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/the_software",
         "teaser":null},{
         "title": "1.3 Tools and techniques",
         "excerpt":"As you remember:   Data science is an approach to data analysis with a foundation in codeand algorithms. The data scientist uses computational tools inorder to apply statistical techniques. ","categories": [],
@@ -64,6 +79,11 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/Names",
         "teaser":null},{
+        "title": "2.5 A first pass",
+        "excerpt":"Remember the three girls in a family problem? Now we have variables and functions, we can do a first pass at solving the problem. First we import the function we need to make random numbers. Don’t worry about this line for now: # Fetch the \"randint\" function from the Numpy...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/first_pass_three_girls",
+        "teaser":null},{
         "title": "2.2 Functions",
         "excerpt":"This is a very short introduction to functions. We will soon go into more detail on functions, in the page on call expressions. For now, we start with something simple, the function cos. Remember functions from mathematics? We might write something like this, in mathematics: You can read $cos(0)$ as:...","categories": [],
         "tags": [],
@@ -74,7 +94,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/sampling_problem",
         "teaser":null},{
-        "title": "2.3 A simpler problem",
+        "title": "2.2 A simpler problem",
         "excerpt":"A simpler problem Imagine a family with four children. What is the probability that the family will have exactly three girls? There are various ways to answer this question. One way, is to usesimulation. Simulation makes a model of the problem. We use the model to generatesimulated data. If the...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/three_girls",
@@ -88,6 +108,11 @@ var store = [{
         "excerpt":"Variables are - things that vary. You remember variables like $x$ and $y$ from mathematics. In mathematics, we can use names, such as $x$ and $y$, to represent any value. In the piece of mathematics below, we define $y$ given any value for $x$: When we have some value for...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/variables",
+        "teaser":null},{
+        "title": "2.3 Introduction to variables",
+        "excerpt":"Remember the problem in the first notebook. Alex and Billie are at a restaurant, getting ready to order. They don’t have much money, so they are calculating their expected bill before they order. Alex is thinking of having the fish for £10.50, and Billie is leaning towards the chicken, at...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/variables_intro",
         "teaser":null},{
         "title": "3.4 Arrays",
         "excerpt":"Arrays While there are many kinds of collections in Python, we will work primarilywith arrays in this class. The numpy package, abbreviated np in programs, provides Python programmerswith convenient and powerful functions for creating and manipulating arrays. import numpy as npArrays often contain numbers, but the can also contain strings...","categories": [],
@@ -343,6 +368,11 @@ var store = [{
         "excerpt":"For background, please read the functions asvalues page. Consider these two functions: def add(a, b): return a + bdef sub(a, b): return a - bHere’s add in action: add(4, 1)Here’s sub in action: sub(4, 1)There’s some code below, that will error, because the assignmentstatement does not set func to have...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/functions_values_exercises",
+        "teaser":null},{
+        "title": "Interesting, no?",
+        "excerpt":"For this assignment, you will probably eventually need the power operator. As in introduction, the multiplication operator is the * sign, as in: 10.50 * 331.5It tells Python to multiply the values on the left by the value on the right. The power operator is **. It works like this:...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/interesting",
         "teaser":null},{
         "title": "Money and death",
         "excerpt":"We return to the death penalty. import numpy as npimport pandas as pdimport matplotlib.pyplot as plt%matplotlib inline# Make plots look a little bit more fancyplt.style.use('fivethirtyeight')In this case, we are going to analyze whether people with higher incomes are more likely to favor the death penalty. To do this, we are...","categories": [],

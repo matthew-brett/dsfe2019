@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Assignment 6 - Data science for everyone - 2019</title>
+<!-- begin _includes/seo.html --><title>Background reading - Data science for everyone - 2019</title>
 <meta name="description" content="">
 
 
