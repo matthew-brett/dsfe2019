@@ -19,7 +19,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/computational-tools",
         "teaser":null},{
-        "title": "1. Datascience for everyone",
+        "title": "1. Data science for everyone",
         "excerpt":"About this textbook This is the textbook for the first year undergraduate course indata science at the University of Birmingham. We go into some detail about what we mean by “Data science” inthe next section, but here is theone-line summary: Data science is an approach to data analysis with a...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
@@ -49,7 +49,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/tools_techniques",
         "teaser":null},{
-        "title": "1.5 Using the Jupyter notebook",
+        "title": "1.7 Using the Jupyter notebook",
         "excerpt":"Using Jupyter notebooks This is a cell. It’s a cell with text - a text cell. A text cell can have formatting, such as links. For example, see Notebook basics for another introduction to the notebook interface. See that page for an introduction to the notebook Dashboard, where you can...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/using_jupyter",
@@ -64,17 +64,17 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/why-data-science",
         "teaser":null},{
-        "title": "2.7 Call expressions",
+        "title": "2.9 Call expressions",
         "excerpt":"Call expressions invoke functions, which are named operations. The name ofthe function appears first, followed by expressions in parentheses. abs(-12)12round(5 - 1.3)4max(2, 2 + 3, 4)5In this last example, the max function is called on three arguments: 2,5, and 4. The value of each expression within parentheses is passed to...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/Calls",
         "teaser":null},{
-        "title": "2.4 Expressions",
+        "title": "2.6 Expressions",
         "excerpt":"Programming languages are much simpler than human languages. Nonetheless,there are some rules of grammar to learn in any language, and that is where wewill begin. In this text, we will use the Pythonprogramming language. Learning the grammar rules is essential, and the samerules used in the most basic programs are...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/Expressions",
         "teaser":null},{
-        "title": "2.6 Names",
+        "title": "2.8 Names",
         "excerpt":"You have already seen expressions. You saw in variables that we often want to give names to theresults of expressions. Now we get a little more formal about what that looks like in Python. When Python gives a name to a value, that is an assignment statement. A statement is...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/Names",
@@ -84,7 +84,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/first_pass_three_girls",
         "teaser":null},{
-        "title": "2.2 Functions",
+        "title": "2.4 Introduction to functions",
         "excerpt":"This is a very short introduction to functions. We will soon go into more detail on functions, in the page on call expressions. For now, we start with something simple, the function cos. Remember functions from mathematics? We might write something like this, in mathematics: You can read $cos(0)$ as:...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/functions",
@@ -104,7 +104,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/to_code",
         "teaser":null},{
-        "title": "2.5 Variables",
+        "title": "2.7 More on variables",
         "excerpt":"Variables are - things that vary. You remember variables like $x$ and $y$ from mathematics. In mathematics, we can use names, such as $x$ and $y$, to represent any value. In the piece of mathematics below, we define $y$ given any value for $x$: When we have some value for...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/variables",
