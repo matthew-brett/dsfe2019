@@ -114,13 +114,13 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/02/variables_intro",
         "teaser":null},{
-        "title": "3.4 Arrays",
-        "excerpt":"Arrays While there are many kinds of collections in Python, we will work primarilywith arrays in this class. The numpy package, abbreviated np in programs, provides Python programmerswith convenient and powerful functions for creating and manipulating arrays. import numpy as npArrays often contain numbers, but the can also contain strings...","categories": [],
+        "title": "3.5 Arrays",
+        "excerpt":"Arrays There are several kinds of sequences in Python. A list is one. However, the sequence type that we will use most in the class, is the array. The numpy package, abbreviated np in programs, provides Python programmerswith convenient and powerful functions for creating and manipulating arrays. # Load the...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/Arrays",
         "teaser":null},{
         "title": "3.3 Comparison",
-        "excerpt":"Comparisons A Boolean value is a value that can only be True or False. It is called“Boolean” after the mathematician and logician GeorgeBoole Boolean values most often arise from comparison operators. Python includes avariety of operators that compare values. For example, 3 is larger than 1 +1. 3 &gt; 1...","categories": [],
+        "excerpt":"Comparisons A Boolean value is a value that can only be True or False. It is called“Boolean” after the mathematician and logician GeorgeBoole Boolean values most often arise from comparison operators. Python includes avariety of operators that compare values. For example, 3 is larger than 1: 3 &gt; 1True&gt; is...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/Comparison",
         "teaser":null},{
@@ -134,10 +134,15 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/Numbers",
         "teaser":null},{
-        "title": "3.5 Ranges",
-        "excerpt":"A range is an array of numbers in increasing or decreasing order,each separated by a regular interval. Ranges are useful ina surprisingly large number of situations, so it is worthwhile tolearn about them. We will use the Numpy module, which we always rename as np, like this: import numpy as...","categories": [],
+        "title": "3.6 Ranges",
+        "excerpt":"A range is an array of numbers in increasing or decreasing order,each separated by a regular interval. Ranges are useful ina surprisingly large number of situations, so it is worthwhile tolearn about them. We will use the Numpy package to make ranges. When we load the Numpy package,we always rename...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/Ranges",
+        "teaser":null},{
+        "title": "3.2.1 String methods",
+        "excerpt":"From an existing string, related strings can be constructed using string methods, which are functions that operate on strings. These methods are called by placing a dot after the string, then calling the function. For example, the following method generates an uppercased version of a string. \"loud\".upper()'LOUD'Perhaps the most important...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/String_Methods",
         "teaser":null},{
         "title": "3.2 Strings",
         "excerpt":"Strings Much of the world’s data is text, and a piece of text represented in acomputer is called a string. A string can represent a word, a sentence, oreven the contents of every book in a library. Since text can include numbers(like this: 5) or truth values (True), a string...","categories": [],
@@ -158,6 +163,11 @@ var store = [{
         "excerpt":"Types of things Every value in Python, has a type. We can show what type of thing something is, by calling type, like this: type(1)inta = 1type(a)intIf you get stuck in some code, it is often useful to check what the type of your values are. We will use multiple...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/data_types",
+        "teaser":null},{
+        "title": "3.4 Lists",
+        "excerpt":"Thus far we have seen the following data types: integer (counting number) - int. floating point number (number with decimal point) - float. string (text) - str. boolean (True or False value) - bool.In data analysis, we often want to collect together several numbers, orstrings, into a sequence. This allows...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/lists",
         "teaser":null},{
         "title": "3.8 Reply to the Supreme Court",
         "excerpt":"Our task has been to reply to the Supreme Court ontheir judgment in the appeal of Robert Swain. Remember, Robert Swain appealed his death sentence, for rape, on thebasis that the jury selection was biased against black people. His trial had a jury pool, of 100, from which the jury...","categories": [],
