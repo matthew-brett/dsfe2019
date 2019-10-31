@@ -19,7 +19,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/computational-tools",
         "teaser":null},{
-        "title": "1. Datascience for everyone",
+        "title": "1. Data science for everyone",
         "excerpt":"About this textbook This is the textbook for the first year undergraduate course indata science at the University of Birmingham. We go into some detail about what we mean by “Data science” inthe next section, but here is theone-line summary: Data science is an approach to data analysis with a...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
@@ -164,12 +164,37 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/data_types",
         "teaser":null},{
+        "title": "3.8 Function arguments",
+        "excerpt":"So far we have used function arguments in a basic way; this is the way that is familiar from mathematics: # Load the Numpy package, and rename to \"np\"import numpy as npnp.cos(0)1.0Here is another Numpy function, from the random sub-package of the Numpy library. We get to the sub-packages with...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/function_arguments",
+        "teaser":null},{
+        "title": "3.11 Indentation, indentation",
+        "excerpt":"Indentation, indentation, indentation import numpy as npPython cares a lot about indentation. You are going see this often in Python code. for loops are one of many places that Python depends on indentation. The indentation tells Python which statements are in the loop, and which are outside the loop. Remember...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/indentation",
+        "teaser":null},{
+        "title": "3.10 Iteration with For loops",
+        "excerpt":"# Load the Numpy package, and rename to \"np\"import numpy as npIteration It is often the case in programming – especially when dealing with randomness– that we want to repeat a process multiple times. We know the numpy function random.randint claims to choose randomlybetween the integers in the range we...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/iteration",
+        "teaser":null},{
+        "title": "3.9 Leaping ahead",
+        "excerpt":"We are still building up to a solution for the three girlsproblem. We have more of the building blocks we need. First we load the Numpy library. # Load the Numpy package, and rename to \"np\"import numpy as npWe are going to simulate 10000 families, each with four children. Here...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/leaping_ahead",
+        "teaser":null},{
         "title": "3.4 Lists",
         "excerpt":"Thus far we have seen the following data types: integer (counting number) - int. floating point number (number with decimal point) - float. string (text) - str. boolean (True or False value) - bool.In data analysis, we often want to collect together several numbers, orstrings, into a sequence. This allows...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/lists",
         "teaser":null},{
-        "title": "3.8 Reply to the Supreme Court",
+        "title": "3.7 Append",
+        "excerpt":"We have already seen how to build a Numpy array from a sequence of values. # Load the Numpy package, and rename to \"np\"import numpy as npOne way to create an array is to make a sequence of values, such as a list, and pass these to the np.array function,...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/numpy_append",
+        "teaser":null},{
+        "title": "3.12 Reply to the Supreme Court",
         "excerpt":"Our task has been to reply to the Supreme Court ontheir judgment in the appeal of Robert Swain. Remember, Robert Swain appealed his death sentence, for rape, on thebasis that the jury selection was biased against black people. His trial had a jury pool, of 100, from which the jury...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/reply_supreme",
@@ -193,16 +218,6 @@ var store = [{
         "excerpt":"Now we have for loops and ranges, we cansolve the problem in population, permutation. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')# Data frame libraryimport pandas as pdWe load the data again: # Load the data frame, and put it in the variable \"audit_data\"audit_data = pd.read_table('audit_of_political_engagement_14_2017.tab')Again, we get...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/brexit_ages",
-        "teaser":null},{
-        "title": "5.4 Indentation, indentation",
-        "excerpt":"Indentation, indentation, indentation import numpy as npPython cares a lot about indentation. You are going see this often in Python code. for loops are one of many places that Python depends on indentation. The indentation tells Python which statements are in the loop, and which are outside the loop. Remember...","categories": [],
-        "tags": [],
-        "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/indentation",
-        "teaser":null},{
-        "title": "5.3 Iteration with For loops",
-        "excerpt":"Iteration It is often the case in programming – especially when dealing with randomness– that we want to repeat a process multiple times. Consider the numpy function random.choice. It claims to choose randomlybetween the elements on an array that we pass it. Here we make an array ofstrings containing two...","categories": [],
-        "tags": [],
-        "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/iteration",
         "teaser":null},{
         "title": "5.2 lists",
         "excerpt":"Lists The data structures that we use most often in data science are: arrays, from numpy; data frames, from pandas.There is another data structure for containing sequences of values the list.You have already seen these in passing, when we created arrays. Now we cover them in more detail. Creating a...","categories": [],
@@ -364,8 +379,13 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/exercises",
         "teaser":null},{
-        "title": "For loops",
-        "excerpt":"For loop exercises import numpy as npYou may remember you can print a number (or anything else) with the print function, like this: print(5)5Use a for loop to print out all the numbers from 3 through 7, one number on each line. # Your code here.Make an empty list called...","categories": [],
+        "title": "Fix my fors",
+        "excerpt":"import numpy as npAll the cells below have errors in syntax or in logic. A syntax error happenswhen the code does not correspond to Python’s rules; Python generates an errorwith some information about which bit of the code caused the problem. A logicerror is where the code does run, but...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/fix_my_fors",
+        "teaser":null},{
+        "title": "For loop exercises",
+        "excerpt":"For loop exercises import numpy as npYou may remember you can print a number (or anything else) with the print function, like this: print(5)5Use a for loop to print out all the numbers from 3 through 7, one number on each line. # Your code here.Make an empty array called...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/for_loops",
         "teaser":null},{
@@ -395,7 +415,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/simulation",
         "teaser":null},{
         "title": "Three girl simulations",
-        "excerpt":"Exercises on the three-girl simulation problem These exercises follow on from the three girls section. Run this cell first: import numpy as np10000 families Now you have seen how to simulate 10 families, with a 2D array.Copy and paste from the code above, into the cell below, andchange what you...","categories": [],
+        "excerpt":"Exercises on the three-girl simulation problem These exercises follow on from the three girls solution in leapingahead, and the reply to the SupremeCourt. You may want to refer back to those pages for inspiration. Run this cell first: # Load the Numpy package, and rename to \"np\"import numpy as npThree...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/three_girl_simulations",
         "teaser":null},{
