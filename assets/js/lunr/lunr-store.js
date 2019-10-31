@@ -19,7 +19,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/computational-tools",
         "teaser":null},{
-        "title": "1. Data science for everyone",
+        "title": "1. Datascience for everyone",
         "excerpt":"About this textbook This is the textbook for the first year undergraduate course indata science at the University of Birmingham. We go into some detail about what we mean by “Data science” inthe next section, but here is theone-line summary: Data science is an approach to data analysis with a...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
