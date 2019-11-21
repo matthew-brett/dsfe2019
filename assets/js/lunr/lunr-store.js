@@ -19,7 +19,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/computational-tools",
         "teaser":null},{
-        "title": "1. Coding for data",
+        "title": "1. Datascience for everyone",
         "excerpt":"About this textbook This is the textbook for the first year undergraduate course indata science at the University of Birmingham. We go into some detail about what we mean by “Data science” inthe next section, but here is theone-line summary: Data science is an approach to data analysis with a...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
@@ -124,7 +124,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/Comparison",
         "teaser":null},{
-        "title": "3.13 More on arrays",
+        "title": "3.6 More on arrays",
         "excerpt":"More on Arrays It’s often necessary to compute something that involves data from more thanone array. If two arrays are of the same size, Python makes it easy to docalculations involving both arrays. For our first example, we return once more to the temperature data. Thistime, we create arrays of...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/More_on_Arrays",
@@ -153,6 +153,11 @@ var store = [{
         "excerpt":"Selecting values from an array import numpy as npWe use arrays all the time, in data science. One of the most common tasks we have to do on arrays, is to select values. We do this with array slicing. We do array slicing when we follow the array variable name...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/array_indexing",
+        "teaser":null},{
+        "title": "3.7 Arrays and axes",
+        "excerpt":"We return to Numpy arrays. Arrays can be two-dimensional. An array with two dimensions has rows and columns. The rows andcolumns are the two axes of the array. We can ask Numpy to do operations over rows or columns, using theaxis keyword argument.Starting with one dimension # We need Numpyimport...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/arrays_and_axes",
         "teaser":null},{
         "title": "3. Data types",
         "excerpt":"Types of things Every value in Python, has a type. We can show what type of thing something is, by calling type, like this: type(1)inta = 1type(a)intIf you get stuck in some code, it is often useful to check what the type of your values are. We will use multiple...","categories": [],
@@ -199,6 +204,11 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/reply_supreme",
         "teaser":null},{
+        "title": "3.9 Revision - three girls",
+        "excerpt":"Three girls In which we solve the three-girls-in-family problem. The problem If there is a family of four children, what is the chance thatfamily will consist of exactly three girls and one boy? We decided we could simulate this situation, by taking fourrandom numbers, between 0 and 1. For each...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/03/three_girls",
+        "teaser":null},{
         "title": "4.1 Introduction to data frames",
         "excerpt":"Introduction to data frames Pandas is a Python package thatimplements data frames, and functions that operate on dataframes. # Load the Pands data science library, call it 'pd'import pandas as pdWe will also use the usual Numpy array library: # Load the Numpy array library, call it 'np'import numpy as...","categories": [],
         "tags": [],
@@ -215,17 +225,32 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/04/df_series_arrays",
         "teaser":null},{
         "title": "5.2 A permutation test",
-        "excerpt":"Now we have for loops and ranges, we cansolve the problem in population, permutation. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')# Data frame libraryimport pandas as pdWe load the data again: # Load the data frame, and put it in the variable \"audit_data\"audit_data = pd.read_table('audit_of_political_engagement_14_2017.tab')Again, we get...","categories": [],
+        "excerpt":"Now we have for loops andranges, we can solve the problem inpopulation, permutation. # Array library.import numpy as np# Data frame library.import pandas as pd# Plottingimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')We load the Brexit survey data again: # Load the data frame, and put it in the variable \"audit_data\"audit_data...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/brexit_ages",
+        "teaser":null},{
+        "title": "5.2 lists",
+        "excerpt":"Lists The data structures that we use most often in data science are: arrays, from numpy; data frames, from pandas.There is another data structure for containing sequences of values the list.You have already seen these in passing, when we created arrays. Now we cover them in more detail. Creating a...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/lists",
+        "teaser":null},{
+        "title": "5.5 Ones and zeros",
+        "excerpt":"import numpy as npWe often want to create arrays with all zeros, or all ones. We do this with: np.zeros(5)array([0., 0., 0., 0., 0.])np.ones(3)array([1., 1., 1.])As ever, review the help with (for example): np.ones?In a new cell. You can ask for a 2D array by passing a list with the...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/ones_zeros",
         "teaser":null},{
         "title": "5. Permutations",
         "excerpt":"In this chapter, we discover that permutation allows us to simulate data inmany more situations than we have seen thus far. We build up the tools to use permutation for a test of differences between twogroups. ","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/permutation",
         "teaser":null},{
+        "title": "5.3 The permutation idea",
+        "excerpt":"The idea of permutation The idea of permutation is fundamental to a wide range of statistical tests.This page shows how permutation works by comparing to a physicalimplementation of permutation, that randomizes values by mixing balls in abucket. A mosquito problem With thanks to John Rauser: Statistics Without the Agonizing Pain...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/permutation_idea",
+        "teaser":null},{
         "title": "5.1 Population and permutation",
-        "excerpt":"A problem of populations We return to the Brexit survey. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')# Data frame libraryimport pandas as pdWe load the data: # Load the data frame, and put it in the variable \"audit_data\"audit_data = pd.read_table('audit_of_political_engagement_14_2017.tab')Now get the ages for the Leavers and...","categories": [],
+        "excerpt":"A problem of populations As in the Brexit analysisexercise,we analyze the Brexit survey. As you will see in the link above, the data are from a survey of the UKpopulation. Each row in the survey corresponds to one person answering. Oneof the questions, named cut15 is how the person voted...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/population_permutation",
         "teaser":null},{
@@ -249,8 +274,8 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/conditional_statements",
         "teaser":null},{
-        "title": "7.1 Functions",
-        "excerpt":"Functions We have already used functions. For example, we have used the round function: a = 3.1415# Call the \"round\" functionb = round(a, 2)b3.14We will soon find that we often need to define our own functions.Before we do, we need to go into more detail about what functions are. Functions...","categories": [],
+        "title": "6.1 Functions in more detail",
+        "excerpt":"Functions We have already used functions. For example, we have used the round function: a = 3.1415# Call the \"round\" functionb = round(a, 2)b3.14We often need to define our own functions. Before we do, we need to go intomore detail about what functions are for, and what they are. Functions...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/functions",
         "teaser":null},{
@@ -258,6 +283,11 @@ var store = [{
         "excerpt":"In the introduction to functions, we introduced themetaphor of a function being a recipe. It is a procedure, thataccepts inputs, (the ingredients of the recipe), and returns an output(the meal from the recipe). A function, like a recipe, usually hasa name. def add(a, b): return a + bAs we saw...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/functions_as_values",
+        "teaser":null},{
+        "title": "6.1 Introduction to functions",
+        "excerpt":"This page is from the equivalentpage in the excellentintroduction to Python by EricMatthes. The original page has an MITlicense. Introducing Functions One of the core principles of any programming language is, “Don’t Repeat Yourself”. If you have an action that should occur many times, you can define that action once...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/introducing_functions",
         "teaser":null},{
         "title": "7. More building blocks",
         "excerpt":"We have already covered some important parts of programming for data science,such as expressions, variables, datatypes, arrays and dataframes. In this section, you cover the last two building blocks you will need asa foundation for your future analyses. These are:   Writing functions  Conditional statements","categories": [],
@@ -350,7 +380,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/array_indexing",
         "teaser":null},{
         "title": "Brexit analysis",
-        "excerpt":"Brexit - the data analysis We start, as usual, by importing all the libraries we need. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')# Data frame libraryimport pandas as pdAll about the Brexiteers Every year, the HansardSocietysponsors a survey on political engagement in the UK. They put topical...","categories": [],
+        "excerpt":"Brexit - the data analysis We start, as usual, by importing all the libraries we need. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Fancy plotsplt.style.use('fivethirtyeight')# Data frame libraryimport pandas as pdSee the Brexit survey for details on the survey data. If you are running on your laptop, first download...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/brexit_analysis",
         "teaser":null},{
