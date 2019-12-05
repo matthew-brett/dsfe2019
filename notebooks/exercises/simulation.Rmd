@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Setup on your computer - Data science for everyone - 2019</title>
+<!-- begin _includes/seo.html --><title>Setting up software and exercises - Data science for everyone - 2019</title>
 <meta name="description" content="">
 
 

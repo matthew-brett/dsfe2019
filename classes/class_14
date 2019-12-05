@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Assessments - Data science for everyone - 2019</title>
+<!-- begin _includes/seo.html --><title>Class 14 - Data science for everyone - 2019</title>
 <meta name="description" content="">
 
 
@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_UK">
 <meta property="og:site_name" content="Data science for everyone - 2019">
-<meta property="og:title" content="Data science for everyone - 2019">
-<meta property="og:url" content="https://matthew-brett.github.io/dsfe2019/assignments/assigment_3.Rmd">
+<meta property="og:title" content="Class 14">
+<meta property="og:url" content="https://matthew-brett.github.io/dsfe2019/classes/class_14">
 
 
 
@@ -30,7 +30,7 @@
   
 
 
-<link rel="canonical" href="https://matthew-brett.github.io/dsfe2019/assignments/assigment_3.Rmd">
+<link rel="canonical" href="https://matthew-brett.github.io/dsfe2019/classes/class_14">
 
 
 
@@ -166,7 +166,7 @@
   
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    
+    <meta itemprop="headline" content="Class 14">
     
     
     
@@ -174,151 +174,27 @@
     <div class="page__inner-wrap">
       
         <header>
-          <!--  -->
+          <!-- <h1 id="page-title" class="page__title" itemprop="headline">Class 14
+</h1> -->
           
         </header>
       
 
       <section class="page__content" itemprop="text">
         
-        # Assignment 3
+        # Licenses for data not otherwise specified
 
+* `gender_data.csv` - see
+  <https://github.com/matthew-brett/datasets/tree/master/gender_stats>.
+   CC-BY, attribution to the World Bank.
 
-For this assignment, you will need the information in:
+* `mosquito_beer.csv` - see
+  <https://github.com/matthew-brett/datasets/tree/master/mosquito_beer>.
+   CC-BY, attribution to Dr Thierry Lefèvre - see link above for detail.
 
-* [Expressions](https://matthew-brett.github.io/dsfe/chapters/02/Expressions)
-* [Names](https://matthew-brett.github.io/dsfe/chapters/02/Names).
-
-
-Don't forget to execute the cells in the notebook, that I've written for you.
-
-
-## Comments
-
-
-In what follows, you will see me using *comments*.  Comments start with a hash character - `#`.  Python ignores everything after the hash character.  This is useful to write text for you or others to read, inside your code.
-
-
-For example, try executing the following cell.
-
-```{python}
-# This is just a comment.  Python ignores it.  It's just for show.
-```
-
-Nothing happens - Python ignored everything after the hash character.
-
-
-## The problem
-
-
-The problem is my bank.
-
-I have a credit card debt of £500.
-
-Let's give that debt amount, a *name*:
-
-```{python}
-# This is the amount I owe at the moment
-my_debt = 500
-```
-
-At the moment, the bank is nice enough to charge me 10% interest per year.   Let's give that a name too.
-
-```{python}
-interest_rate = 0.1
-```
-
-The amount of interest, after one year, is therefore:
-
-```{python}
-interest = my_debt * interest_rate
-interest
-```
-
-Then my total new debt will be:
-
-```{python}
-my_debt + interest
-```
-
-I can also calculate my total new debt all in one go by multiplying by `1 + interest_rate` - in my case - `1.1`.
-
-```{python}
-debt_increaser = 1 + interest_rate
-debt_increaser
-```
-
-```{python}
-my_debt * debt_increaser
-```
-
-## Now your turn
-
-
-Add your code to the cell below, and execute it, to show my total debt after two years.  Your code will probably start with:
-
-```
-my_debt * debt_increaser
-```
-
-```{python}
-# Show my debt after two years.
-# Your code below this comment
-```
-
-Fill in the next cell, in the same way, to show my debt after three years.
-
-```{python}
-# Show my debt after three years.
-```
-
-Now show my debt after 10 years.   You might want to use the *power* operator `**` to do this.
-
-```{python}
-# Show my debt after ten years.
-```
-
-## An offer from the bank
-
-
-The bank has just sent me a nice letter explaining that they are going to start charging me interest every week instead of every year.   They value me as a customer, so, instead of dividing the annual interest rate by 52, they are going to divide it by 53 instead.   But - is that a good offer?
-
-
-Here is their proposed weekly interest rate:
-
-```{python}
-weekly_interest_rate = interest_rate / 53
-weekly_interest_rate
-```
-
-That corresponds to:
-
-```{python}
-weekly_debt_increaser = 1 + weekly_interest_rate
-weekly_debt_increaser
-```
-
-So, starting from my original debt, I will owe this much after one week:
-
-```{python}
-# What I owe, after one week, on the new deal
-my_debt * weekly_debt_increaser
-```
-
-Fill in the cell below, to show how much I will owe after 52 weeks.  You will probably want `**` here again.
-
-```{python}
-# Show my debt after 52 weeks, on the new deal
-```
-
-## For extra cool points
-
-
-Can you calculate roughly what the weekly interest rate has to be, in order to correspond to the 10% annual interest that I started with?   There are several ways to do this, but you can try trial and error, if you like.
-
-```{python}
-# Your code to estimate the right weekly interest rate.
-```
+* `rate_my_course.csv` - see
+  <https://github.com/matthew-brett/datasets/tree/master/good_and_easy>.
+   The license is not clear - see link for details.  For now, assume CC-0.
 
         
       </section>

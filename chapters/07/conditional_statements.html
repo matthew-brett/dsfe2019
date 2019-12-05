@@ -23,7 +23,7 @@
 
 
 
-  <meta property="article:published_time" content="2019-11-21T22:54:19+00:00">
+  <meta property="article:published_time" content="2019-12-05T18:19:48+00:00">
 
 
 
@@ -877,136 +877,6 @@
         
         <ul>
           
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/interesting" class="level_1">Interesting, no?</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/exercises/names" class="level_1">Thinking about names</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/for_loops" class="level_1">For loop exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/fix_my_fors" class="level_1">Fix my fors</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/three_girl_simulations" class="level_1">Three girl simulations</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/array_indexing" class="level_1">Array indexing</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/simulation" class="level_1">More simulations</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/df_exercises" class="level_1">Data frames</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/brexit_analysis" class="level_1">Brexit analysis</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/for_loops" class="level_1">For loops</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/function_exercises" class="level_1">Function exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/functions_values_exercises" class="level_1">Function as values exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/conditional_statements_exercises" class="level_1">Conditional statement exercises</a></li>
-          
         </ul>
         
       </li>
@@ -1078,7 +948,7 @@
     <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="headline" content="6.2 Conditional statements">
       <meta itemprop="description" content="Conditional Statements">
-      <meta itemprop="datePublished" content="November 21, 2019">
+      <meta itemprop="datePublished" content="December 05, 2019">
       
 
       <div class="page__inner-wrap">
@@ -1142,15 +1012,15 @@ express alternative behavior depending on argument values.</p>
 <p>Let us work through what Python will do when we evaluate <code class="highlighter-rouge">classify(3)</code>.</p>
 
 <ol>
-  <li>Evaluate <code class="highlighter-rouge">classify</code> to the internal representation (IR) of the
+  <li>Evaluate <code class="highlighter-rouge">classify</code> to the computer representation (CR) of the
 function;</li>
-  <li>Evaluate <code class="highlighter-rouge">3</code> to give the IR of the integer 3</li>
+  <li>Evaluate <code class="highlighter-rouge">3</code> to give the CR of the integer 3</li>
   <li>
-    <p>Call the IR of the function, with the IR of int 3. So:</p>
+    <p>Call the CR of the function, with the CR of int 3. So:</p>
 
     <ol>
       <li>Python enters function world</li>
-      <li>The new variable <code class="highlighter-rouge">x</code> gets the value IR of int 3.</li>
+      <li>The new variable <code class="highlighter-rouge">x</code> gets the value CR of int 3.</li>
       <li>Python executes the function body</li>
     </ol>
   </li>
@@ -1162,10 +1032,10 @@ function;</li>
 
 <ol>
   <li>Python evaluates the <em>if expression</em> <code class="highlighter-rouge">x &gt; 0</code>.  The result is the
-IR of <code class="highlighter-rouge">True</code>.  This is a true value, so Python executes the body
+CR of <code class="highlighter-rouge">True</code>.  This is a true value, so Python executes the body
 of the if statement.</li>
   <li>The body of the if statement is the single line <code class="highlighter-rouge">return
-'Positive'</code>.  <code class="highlighter-rouge">'Positive'</code> evaluates to the IR of the string
+'Positive'</code>.  <code class="highlighter-rouge">'Positive'</code> evaluates to the CR of the string
 <code class="highlighter-rouge">'Positive'</code>.  <code class="highlighter-rouge">return</code> exits function world, returning this
 value.</li>
 </ol>
@@ -1181,7 +1051,7 @@ positive number, like <code class="highlighter-rouge">3</code>. But if the input
 such as <code class="highlighter-rouge">-3</code>, then this happens, in the function body:</p>
 
 <ol>
-  <li><code class="highlighter-rouge">x</code> has the value IR of int -3.</li>
+  <li><code class="highlighter-rouge">x</code> has the value CR of int -3.</li>
   <li><code class="highlighter-rouge">x &gt; 0</code> evaluates to <code class="highlighter-rouge">False</code>, so Python skips the body of the if
 statement.</li>
   <li>The function body ends without executing a <code class="highlighter-rouge">return</code> statement.</li>
@@ -1216,7 +1086,7 @@ clause, after the if expression, as before.  If it evaluates to a false value, P
         <span class="k">return</span> <span class="s">'Not positive'</span>
 </code></pre></div></div>
 
-<p>Imagine we evaluate <code class="highlighter-rouge">classify(-3)</code> again.  Python enters function world, and sets <code class="highlighter-rouge">x</code> to have the value IR of int -3.  It checks <code class="highlighter-rouge">x &gt; 0</code> and finds a false value, so it skips the first clause, and executes the clause following <code class="highlighter-rouge">else:</code>.  This <code class="highlighter-rouge">return</code>s <code class="highlighter-rouge">'Not positive'</code>.</p>
+<p>Imagine we evaluate <code class="highlighter-rouge">classify(-3)</code> again.  Python enters function world, and sets <code class="highlighter-rouge">x</code> to have the value CR of int -3.  It checks <code class="highlighter-rouge">x &gt; 0</code> and finds a false value, so it skips the first clause, and executes the clause following <code class="highlighter-rouge">else:</code>.  This <code class="highlighter-rouge">return</code>s <code class="highlighter-rouge">'Not positive'</code>.</p>
 
 <p>Now imagine we prefer our function to return <code class="highlighter-rouge">'Negative</code> for negative values and <code class="highlighter-rouge">Zero</code> if the input value is 0.  It seems like we need three clauses, one each for positive, negative and 0 values.</p>
 

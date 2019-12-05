@@ -20,7 +20,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/computational-tools",
         "teaser":null},{
         "title": "1. Coding for data",
-        "excerpt":"About this textbook This is the textbook for the first year undergraduate course indata science at the University of Birmingham. We go into some detail about what we mean by “Data science” inthe next section, but here is theone-line summary: Data science is an approach to data analysis with a...","categories": [],
+        "excerpt":"About this textbook This is the textbook for a course teaching data science - coding for data. We go into some detail about what we mean by “Data science” in the nextsection, but here is the one-line summary: Data science is an approach to data analysis with a foundation in...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/01/intro",
         "teaser":null},{
@@ -360,7 +360,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/df_exercises",
         "teaser":null},{
         "title": "Exercises",
-        "excerpt":"Some exercises for various points in the course. ","categories": [],
+        "excerpt":"Zip file exercises are in OKpy format. See installingpackages on how install OKPy, and extractingarchives for extracting zip files to a folder on yourcomputer. Interesting, no? Valid, invalid names Variables, names Using functions, rounding Strings Strings and variables Data types Arrays More arrays Array indexing Fix my fors More for...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/exercises/exercises",
         "teaser":null},{

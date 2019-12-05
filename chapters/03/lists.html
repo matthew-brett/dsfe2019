@@ -23,7 +23,7 @@
 
 
 
-  <meta property="article:published_time" content="2019-11-21T22:54:19+00:00">
+  <meta property="article:published_time" content="2019-12-05T18:19:48+00:00">
 
 
 
@@ -877,136 +877,6 @@
         
         <ul>
           
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/interesting" class="level_1">Interesting, no?</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/exercises/names" class="level_1">Thinking about names</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/for_loops" class="level_1">For loop exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/fix_my_fors" class="level_1">Fix my fors</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/three_girl_simulations" class="level_1">Three girl simulations</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/array_indexing" class="level_1">Array indexing</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/simulation" class="level_1">More simulations</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/df_exercises" class="level_1">Data frames</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/brexit_analysis" class="level_1">Brexit analysis</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/for_loops" class="level_1">For loops</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/function_exercises" class="level_1">Function exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/functions_values_exercises" class="level_1">Function as values exercises</a></li>
-          
-            
-            
-
-            
-            
-
-            
-
-            <li><a href="/dsfe2019/chapters/exercises/conditional_statements_exercises" class="level_1">Conditional statement exercises</a></li>
-          
         </ul>
         
       </li>
@@ -1078,7 +948,7 @@
     <article class="page textbook" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="headline" content="3.4 Lists">
       <meta itemprop="description" content="Thus far we have seen the following data types:">
-      <meta itemprop="datePublished" content="November 21, 2019">
+      <meta itemprop="datePublished" content="December 05, 2019">
       
 
       <div class="page__inner-wrap">
@@ -1138,10 +1008,10 @@ one place, and refer to all the values with a single name.  Now that we can refe
 </code></pre></div></div>
 
 <div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get four random numbers between 0 and 1.
-</span><span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Here, each random number gets its own variable.   Then we added the numbers like this:</p>
@@ -1248,7 +1118,7 @@ yourself it returns numbers between 0 and 4 - simulated numbers of girls in
 a family of four children.</p>
 
 <div class="language-python input_area highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get four random numbers between 0 and 1, put them in a list.
-</span><span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>
+</span><span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="c1"># Add all the values in the list
 </span><span class="nb">sum</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
 </code></pre></div></div>
