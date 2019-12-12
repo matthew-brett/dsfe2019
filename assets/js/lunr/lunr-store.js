@@ -234,7 +234,12 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/05/population_permutation",
         "teaser":null},{
-        "title": "6.2 Conditional statements",
+        "title": "Booleans and labels",
+        "excerpt":"We have already used Boolean series to index data frames and other series. This page gives a little more details about how that works, in order to explainsome subtleties in results. We return to the World Bank statistics on development and gender ingender_stats.csv. Download that file to the same directory...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/booleans_and_labels",
+        "teaser":null},{
+        "title": "6.5 Conditional statements",
         "excerpt":"Conditional Statements In many situations, actions and results depends on a specific set ofconditions being satisfied. For example, individuals in randomizedcontrolled trials receive the treatment if they have been assigned tothe treatment group. A gambler makes money if she wins her bet. In this section we will learn how to...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/conditional_statements",
@@ -259,10 +264,20 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/more_building_blocks",
         "teaser":null},{
+        "title": "6.7 Example: noble politics",
+        "excerpt":"This page has two aims: to practice and extend Pandas indexing; to extend the idea of permutation to data in categories;We also ask the question - is politics noble? # Our usual importsimport numpy as npimport pandas as pdimport matplotlib.pyplot as plt%matplotlib inlineplt.style.use('fivethirtyeight')Our data is from this book: Samuel P....","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/noble_politics",
+        "teaser":null},{
         "title": "6.2 On None",
         "excerpt":"Python has a special value, called None, that it often uses to tellyou that it cannot give you a valid value. Unlike any other commonvalue in Python, if an expression evaluates to None, Python showsyou nothing at all for the value, in the notebook, or in aninteractive Python console. my_value...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/none",
+        "teaser":null},{
+        "title": "6.6 Indexing in Pandas",
+        "excerpt":"Way back in the introduction to data frames, we covered indexing into data frames withBoolean vectors, such as Pandas Series or Numpy arrays, and indexing into data frames with column names. This page covers more sophisticated indexing in Pandas. To understand this indexing, we first need to cover the index...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/pandas_indexing",
         "teaser":null},{
         "title": "7.5 Finding lines",
         "excerpt":"In The Mean and Slopes, we were looking for the best slopeto predict one vector of values from another vector of values. Specifically, we wanted our slope to predict the Maternal Mortality Ratio (MMR) values from the Fertility Rate (FR) values. By analogy with The Mean as Predictor, we decided...","categories": [],
