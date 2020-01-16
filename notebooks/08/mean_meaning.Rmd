@@ -203,12 +203,17 @@ We need Pandas to load the gender data that we first saw in the [data frame intr
 import pandas as pd
 ```
 
+The dataset is [gender_stats.csv](/dsfe2019/data/gender_stats.csv).
+This contains some World Bank statistics for each country on health and
+economic factors related to gender equality. See [the data file page](/dsfe2019/data/gender_stats) for more detail.
+
 ```{python}
 # Load the data file
 gender_data = pd.read_csv('gender_stats.csv')
 ```
 
-In this case, we are only interested in the data for the Maternal Mortality Ration `mat_mort_ratio`.
+In this case, we are only interested in the data for the Maternal Mortality
+Ratio `mat_mort_ratio`.
 
 ```{python}
 mat_mort_ratio = gender_data['mat_mort_ratio']
@@ -419,9 +424,9 @@ In fact, the value for the mean is even lower:
 sum_of_squares(mm_arr, mm_mean)
 ```
 
-We would have to use some [fairly simple
-calculus](https://github.com/matthew-brett/biosciences-intro/blob/master/mean_minimizes_ss_deviations.ipynb)
-to show this, but the mean has to give the lowest sum of squares error.
+We would have to use some [fairly simple calculus and
+algebra](../extra/mean_sq_deviations) to show this, but the *mean* has to give
+the lowest sum of squares error.
 
 Put another way, the mean minimizes:
 
