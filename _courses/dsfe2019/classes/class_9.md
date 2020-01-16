@@ -6,10 +6,22 @@ permalink: /classes/class_9
 
 # Day 9 (the tenth day)
 
-* [Indentation](../chapters/05/indentation)
-* [Fix me exercise](../exercises/fix_me.ipynb)
-* [Ones zeros](../chapters/05/ones_zeros)
-* [Brexit ages](../chapters/05/brexit_ages)
+## Project
 
-Your optional assignment is the [Money and death
-exercise](../chapters/exercises/money_and_death).
+About the [project](../project).
+
+* Project group rules
+* Forming your group
+* Designing your pitch
+* Brave pitchers
+
+## Simulations
+
+* [Filling arrays](../chapters/03/filling_arrays)
+* [Three girl simulations exercise](../exercises/three_girls.zip)
+* [More simulations exercise](../exercises/simulation.zip)
+
+## Assignment
+
+* Forming teams
+* Preparing your project data pitch.

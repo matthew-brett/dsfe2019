@@ -4,21 +4,22 @@ title: Project grading rubric
 permalink: /projects/rubric
 ---
 
-DSFE 2018 project grading rubric
-================================
+Project grading rubric
+======================
 
-Your total project mark is out of 100.  This mark in turn makes up 70% of your
+Your total project mark is out of 100.  This mark in turn makes up 60% of your
 course grade.
 
-There are two components to this assessment: the project and your
-contribution. 72% of the project marks are for the project itself; see
-the categories below.
+There are two components to this assessment: the project and your contribution.
+Usually, 70% of the project marks are for the project itself; see the
+categories below, and the caveat at the end.
 
-28% of the marks are for your contribution; see heading below.
+Usually, 30% of the marks are for your contribution; see headings below and the caveat at the end.
 
 ## Project grades
 
-Each of the following 8 sections is worth 9 marks, for a total of 72.
+Each of the following 7 sections is worth 10 marks, for a total of 70
+(although, see caveat at the end of this page).
 
 For each row, the table gives a description of work that will earn: between
 0 and 50% in this category (fail to bare pass); 50-75% (bare pass to good
@@ -30,7 +31,6 @@ page](../project) for schedule.
 <!---
 https://divtable.com/converter/
 -->
-
 <table style="width: 1020.45px;"><colgroup> <col style="width: 12%;" /> <col style="width: 28%;" /> <col style="width: 29%;" /> <col style="width: 29%;" /> </colgroup>
 <tbody>
 <tr class="odd">
@@ -65,12 +65,6 @@ https://divtable.com/converter/
 <p>Relevant conclusions explicitly tied to analysis and to context</p>
 <p>Plots convey information correctly with adequate and appropriate reference information</p>
 </td>
-</tr>
-<tr class="odd">
-<td style="width: 124px;">Code review</td>
-<td style="width: 291px;">Little evidence that group members are giving constructive feedback on each other's code.</td>
-<td style="width: 301px;">Some evidence that group members are giving constructive feedback on each other's code, leading to better code.</td>
-<td style="width: 301.45px;">Extensive evidence that group members are giving constructive feedback on each other's code, leading to better code.</td>
 </tr>
 <tr class="odd">
 <td style="width: 124px;">Readability</td>
@@ -110,12 +104,13 @@ https://divtable.com/converter/
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ## Project report
 
-Your project report should be around 3000 words of explanatory text
-and code, not including figures and tables.
+Your project report should be about 3500 words of explanatory text and code,
+not including figures and tables.  Up to 5000 words is OK, if you need them,
+but if you plan to have much more than this, please contact me in good time to
+discuss it.
 
 It can be in the form of a PDF document, or a Jupyter Notebook.
 
@@ -148,9 +143,8 @@ Example instructions for a simple report might be:
 > Open `simulate_data.ipynb` and run all cells.  This writes out tables 1 and 2
 > that you see in our report.
 
-The `README` file can also be your report.  In that case, your
-`README` instructions would be "Run this notebook to generate our
-report".
+The `README` file can also be your report.  In that case, your `README`
+instructions would be "Run this notebook to generate our report".
 
 ## Personal contribution
 
@@ -185,3 +179,33 @@ The mark guidelines for this part are:
 * 75-100%: strong evidence of contribution and collaboration.  Some
   contribution to nearly all headings; substantial contributions across the
   majority of headings.  Strong evidence that you helped other team members contribute across several headings.
+
+Usually, the weight for the project contribution mark is 30%, as compared to
+70% weighting for the project, but see below.
+
+## Project mark adjustment for contribution
+
+In most cases your final project mark will follow the split listed above:
+
+* 70% for the project
+* 30% for personal contribution
+
+However, we reserve the right to change these weightings if we find that you
+have made well below your fair share of project contribution.
+
+Of course, a fair share depends on your group size.  A fair share for
+a three-member group is 33% of the work, and a fair share for a 5 member group
+is 20%.
+
+If we review the project files and your contribution document, and conclude
+that you have done considerably less than your fair share, we will change the
+weightings of your project and personal contribution to 60% / 40%, 50% / 50%,
+or, in extreme cases, 40% / 60%.
+
+We expect to do this for very few or none of you, but we reserve that right.
+
+Bear in mind that project contribution means contributing across the project.
+For example, you would be making a minor contribution if you wrote an
+introduction or conclusion for the report, without contributing to the
+analysis.  For this assignment the major part of the work is designing,
+writing, describing and summarizing your analysis.

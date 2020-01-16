@@ -62,6 +62,30 @@ If you find a dataset you cannot load - for example, a dataset that is not in CS
   Data Service collection includes major UK government-sponsored surveys,
   cross-national surveys, longitudinal studies, UK census data, international
   aggregate, business data, and qualitative data."
+* [Datahub.io](https://datahub.io) : Open Knowledge Foundation dataset catalogue.
+* [Data is Plural
+  Listing](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk):
+  a collection of interesting datasets compiled by[Jeremy
+  Singer-Vine](https://twitter.com/jsvine).
+* [Inter-university Consortium for Political and Social
+  Research](https://www.icpsr.umich.edu/icpsrweb): Digital Behavioral
+  & Social Science Data Archive with more than 780 member institutions
+  around the world.
+* Survey on [How couples met and stayed
+  together](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/30103)
+* [The Bureau of Investigative
+  Journalism](https://www.thebureauinvestigates.com/projects)
+* <https://openpsychometrics.org/> "provides a collection of interactive
+  personality tests with detailed results that can be taken for personal
+  entertainment or to learn more about personality assessment". You can get [the raw
+  data](https://openpsychometrics.org/_rawdata) from their site.
+* [NHS
+  datasets](https://digital.nhs.uk/data-and-information/data-collections-and-data-sets)
+* [Propublica sentencing
+  article](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+  and [description of the
+  analysis](https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm).
+* [Propublica data store](https://www.propublica.org/datastore).
 
 ## Your pitch
 

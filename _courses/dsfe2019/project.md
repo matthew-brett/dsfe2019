@@ -18,8 +18,8 @@ permalink: /project
 *   Each team must have at least one Theory person and one Data
     person.
 *   See below for data rules.
-*   When you have a team you're happy with, choose one member to
-    email me (Matthew), with the information below.
+*   When you have a team you're happy with, choose one member to email me
+    (Matthew), with the information below.
 
 I will consider smaller team sizes, and even team sizes of 1, but your email
 should give convincing justification (see below).  In particular, you need to
@@ -54,9 +54,12 @@ This term is a 10 credits of a 20 credit course.  Each credit corresponds to
 10 hours work, of which one hour is the lecture.  Unlike other courses, there
 is no exam to revise for, so the rest of the time is for the project.
 
-You will find that, at the beginning of the project, this amount of work can seem daunting.  Please don't worry; if you work steadily, you will find things fall into place.  On the other hand, you must plan to work steadily.
+You will find that, at the beginning of the project, this amount of work can
+seem daunting.  Please don't worry; if you work steadily, you will find things
+fall into place.  On the other hand, you must plan to work steadily.
 
-This is a write-up of a previous data science course we ran: {% cite millman2018rcsds %}.
+This is a write-up of a previous data science course we ran: {% cite
+millman2018rcsds %}.
 
 In answer to "What advice would you give to another student who is considering taking this course?":
 
@@ -78,15 +81,16 @@ not wait to ask us; if you are stuck, we need to know as soon as possible.
 
 We only expect you to use the techniques that we have shown you in the
 lectures.  You should not use any techniques that you do not understand.  We
-would far prefer that you do simple, clear analyses using basic techniques
-than complex analyses that you do not fully understand.  Your job as a data
-scientist is to draw clear conclusions from data.  Often this will just
-involve selecting and plotting relevant data, and making an argument from the
-results.
+would far prefer that you do simple, clear analyses using basic techniques than
+complex analyses that you do not fully understand.  Your job as a data
+scientist is to draw clear conclusions from data.  Often this will just involve
+selecting and plotting relevant data, and making an argument from the results.
 
 ## Suggested structure
 
-See the [rubric](projects/rubric) for the requirements of your project files.  This specifies that you must have a `README` file in some format, as the main instructions to reproduce your analysis.
+See the [rubric](projects/rubric) for the requirements of your project files.
+This specifies that you must have a `README` file in some format, as the main
+instructions to reproduce your analysis.
 
 We also recommend that you:
 
@@ -115,10 +119,14 @@ See: [plagiarism rules](projects/plagiarism)
 
 ## Using Python libraries
 
-You can use any part of the Numpy, Pandas, and Matlplotlib libraries with no
+You can use any part of the Numpy, Pandas, and Matplotlib libraries with no
 further explanation.
 
-If you use other libraries, you should explain in your write-up why you are using the library, rather than building the analysis yourself.  You must persuade us, in your write-up, that you fully understand the parts of the library that you are using.  If in doubt, speak to me (Matthew), or one of the TAs.
+If you use other libraries, you should explain in your write-up why you are
+using the library, rather than building the analysis yourself.  You must
+persuade us, in your write-up, that you fully understand the parts of the
+library that you are using.  If in doubt, speak to me (Matthew), or one of the
+TAs.
 
 ## Marking
 
@@ -126,28 +134,27 @@ See [the full grading rubric](projects/rubric).
 
 In summary:
 
-*   Project marked for clarity, depth, validity and reproducibility (72% of
-    project grade);
+*   Project marked for clarity, depth, validity and reproducibility (70% of
+    project grade, but see below);
 *   Each member of the project submits a summary of their own contribution,
-    with evidence from the public record of collaboration (28% of project
-    grade).
+    with evidence from the public record of collaboration (30% of project
+    grade, but see below).
+*   Sometimes, we will adjust the weight of your project mark according to your
+    contribution.
 
 ## Dates
 
+These are provisional, except for the "Projects due" deadline.
+
 | Week | Date       | Class                     |
 | ---- | ---------- | ------------------------- |
-| 1    | 18 Jan     | Start to form teams       |
-| 2    | 25 Jan     | Data pitches 1            |
-| 3    |  1 Feb     | Data pitches 2            |
-| 4    |  8 Feb     | Teams finalized           |
-| 5    | 15 Feb     | Workflow                  |
-| 6    | 22 Feb     |                           |
-| 7    |  1 Mar     |                           |
-| 8    |  8 Mar     | Progress reports          |
-| 9    | 15 Mar     |                           |
-| 10   | 22 Mar     | Presentations             |
-| 11   | 29 Mar     |                           |
-| 11   | 30 Mar     | Projects due              |
+| 1    | 17 Jan     | Start to form teams       |
+| 2    | 24 Jan     | Data pitches 1            |
+| 3    | 31 Jan     | Data pitches 2            |
+| 4    |  7 Feb     | Teams finalized           |
+| 8    |  6 Mar     | Progress reports          |
+| 10   | 20 Mar     | Presentations             |
+| 11   | 28 Mar     | Projects due              |
 
 ## Progress report
 
@@ -156,3 +163,27 @@ See: [progress report](projects/progress)
 ## Presentations
 
 See: [project presentations](projects/presentation)
+
+## Previous topics
+
+In a previous version of this class, the data topics included:
+
+* An analysis of UK and European public data on immigration to assess if the UK
+  government was, [despite
+  assurances](https://en.wikipedia.org/wiki/Windrush_scandal), continuing to
+  deport residents from the West Indies who had settled in the UK legally
+  before 1973.
+* Looking for a link between UK school performance and local pollution data.
+* Trying to relate Birmingham voting patterns to local levels of homelessness.
+  Do people in areas with more homelessness tend to vote Conservative, Labour
+  or Lib Dem?
+* Global environmental and demographic factors associated with inflammatory
+  bowel disease.
+* An attempt to work out, with data, the algorithm that YouTube uses when
+  recommending videos;
+* Using historical data to predict the future National (American) Football
+  League performance of a very successful college American football player.
+* Predicting future stock prices using historical stock price data.
+* Analyzing public NASA data to identify nearby habitable planets.
+* Analysis of train timetable and departure / arrivals data for evidence of
+  poor performance of particular train companies or lines.

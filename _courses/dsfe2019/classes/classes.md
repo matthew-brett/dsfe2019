@@ -13,6 +13,8 @@ permalink: /classes
   page](https://canvas.bham.ac.uk/courses/40740) for
   announcements, discussions and grades.
 
+## Autumn term
+
 | Week | Date       | Class                        |
 | ---- | ---------- | ---------------------------- |
 | 1    |  4 Oct     | [class 0](classes/class_0)   |
@@ -25,3 +27,9 @@ permalink: /classes
 | 8    |  22 Nov    | [class 6](classes/class_6)   |
 | 10   |  6 Dec     | [class 7](classes/class_7)   |
 | 11   |  13 Dec    | [class 8](classes/class_8)   |
+
+## Spring term
+
+| Week | Date       | Class                        |
+| ---- | ---------- | ---------------------------- |
+| 1    |  17 Jan    | [class 9](classes/class_9)   |
