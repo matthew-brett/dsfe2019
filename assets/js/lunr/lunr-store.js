@@ -295,7 +295,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/mean",
         "teaser":null},{
         "title": "7.3 Mean and slopes",
-        "excerpt":"In The Mean as Predictor, we found that the mean had some goodproperties as a single best predictor for a whole distribution. The mean gives a total prediction error of zero. Put otherwise, onaverage, your prediction error is zero. The mean gives the lowest squared error. Put otherwise, the meangives...","categories": [],
+        "excerpt":"In The Mean as Predictor, we found that the mean had some goodproperties as a single best predictor for a whole distribution. The mean gives a total prediction error of zero. Put otherwise, on average,your prediction error is zero. The mean gives the lowest squared error. Put otherwise, the mean...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/mean_and_slopes",
         "teaser":null},{
@@ -430,7 +430,7 @@ var store = [{
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/extra/mean_deviations",
         "teaser":null},{
         "title": "Squared deviations around the mean",
-        "excerpt":"The mean and squared differences This page is assumes a lot more maths than the standard bit of the course. Inparticular, it assumes that that you know the basics of finding thederivative of a function. In practice this means that, if you are in the US, you will need to...","categories": [],
+        "excerpt":"The mean and squared differences This page is assumes a lot more maths than the standard bit of the course. Inparticular, it assumes that you know the basics of finding thederivative of a function. In practice this means that, if you are in the US, you will need to have...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/extra/mean_sq_deviations",
         "teaser":null},{
@@ -443,6 +443,11 @@ var store = [{
         "excerpt":"More on lists This section covers some more operations on lists. See listsfor an introduction to lists. Removing values from a list Another common operation on lists, is finding and removing values. Removing values by index The pop method of a list, removes a value at a given position in...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/extra/more_on_lists",
+        "teaser":null},{
+        "title": "Finding the best slope",
+        "excerpt":"This page follows on from the page on mean squareddeviations. Like that page, is assumes a lot more mathsthan the standard flow of the course. In particular, it assumes that youknow the basics of finding thederivative of a function. Please make sure you have read and understand the mean squared...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/extra/slope_deviations",
         "teaser":null},{
         "title": "First announcement!",
         "excerpt":"      HW 11 is due Thursday, 4/19 at 11:59pm. You will receive an early submission bonus point if you turn in your final submission by Wednesday, 4/18 at 11:59pm.         The Project 3 checkpoint is due on Friday, 4/20. The project is due on Friday 4/27.   ","categories": [],

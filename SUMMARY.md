@@ -81,7 +81,6 @@
   * - [More simulations](notebooks/exercises/simulation.ipynb)
   * - [Data frames](notebooks/exercises/df_exercises.ipynb)
   * - [Brexit analysis](notebooks/exercises/brexit_analysis.ipynb)
-  * - [For loops](notebooks/exercises/for_loops.ipynb)
   * - [Function exercises](notebooks/exercises/function_exercises.ipynb)
   * - [Function as values exercises](notebooks/exercises/functions_values_exercises.ipynb)
   * - [Conditional statement exercises](notebooks/exercises/conditional_statements_exercises.ipynb)
@@ -91,3 +90,4 @@
   * [Berkeley introduction to functions](notebooks/extra/data8_functions.ipynb)
   * [Deviations around the mean](notebooks/extra/mean_deviations.md)
   * [Squared deviations around the mean](notebooks/extra/mean_sq_deviations.md)
+  * [Finding the best slope](notebooks/extra/slope_deviations.md)
