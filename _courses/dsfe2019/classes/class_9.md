@@ -18,8 +18,6 @@ About the [project](../project).
 ## Simulations
 
 * [Filling arrays](../chapters/03/filling_arrays)
-* [Three girl simulations exercise](../exercises/three_girls.zip)
-* [More simulations exercise](../exercises/simulation.zip)
 
 ## Assignment
 

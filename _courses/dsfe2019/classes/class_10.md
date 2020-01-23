@@ -8,18 +8,16 @@ permalink: /classes/class_10
 
 ## Announcements
 
-* Reading week?
-* Who's doing what?
 * Project deadlines - see [project page](../project).
 
 ## Schedule
 
-* Project group rules
-* Forming your group
-* Designing your pitch
-* Brave pitchers
+* Data pitches 1
+* [Three girl simulations exercise](../exercises/three_girls.zip)
+* [More simulations exercise](../exercises/simulation.zip)
 
 ## Assignment
 
-* Forming teams
+* Forming teams.
 * Preparing your project data pitch.
+* Start work on project.
