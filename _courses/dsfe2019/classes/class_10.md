@@ -16,6 +16,7 @@ permalink: /classes/class_10
 * [Filling arrays](../chapters/03/filling_arrays)
 * [Three girl simulations exercise](../exercises/three_girls.zip)
 * [More simulations exercise](../exercises/simulation.zip)
+* [Introduction to data frames](../chapters/04/data_frame_intro)
 
 ## Assignment
 
