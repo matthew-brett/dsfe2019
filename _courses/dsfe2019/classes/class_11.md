@@ -14,14 +14,15 @@ permalink: /classes/class_11
 
 ## Schedule
 
-* Data pitches
-* About Python, Jupyter, and Kernels.
-* [Sorting arrays](../chapters/06/sorting_arrays)
-* [The Monty Hall problem](../chapters/06/monty_hall)
-* [Conditionals](../chapters/06/conditional_statements)
+* Data pitches 2
+* Introduction to [CoCalc](https://cocalc.com)
+* [Introduction to data frames](../chapters/04/data_frame_intro)
+* [Filling arrays](../chapters/03/filling_arrays)
+* [Three girl simulations exercise](../exercises/three_girls.zip)
+* [More simulations exercise](../exercises/simulation.zip)
 
 ## Assignment
 
-Form groups.
-
-Email me with your group and data description.
+* Forming teams.
+* Preparing your project data pitch.
+* Start work on project.
