@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Project - Data science for everyone - 2019</title>
+<!-- begin _includes/seo.html --><title>Rate My Professors averages by course - Data science for everyone - 2019</title>
 <meta name="description" content="">
 
 

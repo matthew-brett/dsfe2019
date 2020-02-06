@@ -183,11 +183,17 @@
         
         In [finding slopes](finding_slopes), we found the line the did the best job of predicting one vector of values from another vector of values.
 
-Our line was a slope and an intercept.  We used it to predict the Maternal Mortality Ratio (MMR) values from the Fertility Rate (FR) values.
+Our line was a slope and an intercept.  We used it to predict the Overall
+Quality scores (`quality`) for courses, from the Easiness scores (`easiness`).
 
 We chose the line to minimize the average prediction errors, and the sum of squared prediction errors.
 
-Now we may have another question.  Can we believe the slope?   Put more formally, is it possible that there is in fact no underlying positive or negative slope relating FR and MMR, and the slope that we found arose because of *sampling error*.  That is, there was some random fluctuation in the data, perhaps from year to year, and just by chance, the random fluctuation resulted in the slope we observe.
+Now we may have another question.  Can we believe the slope?   Put more
+formally, is it possible that there is in fact no underlying positive or
+negative slope relating  Easiness and Quality, and the slope that we found
+arose because of *sampling error*.  That is, there was some random fluctuation
+in the data, from course to course, and just by chance, the random fluctuation
+resulted in the slope we observe.
 
 This is a very similar problem to the problem of comparing means between two groups.  Like that problem, we can get at our question using a permutation test.
 
@@ -197,39 +203,32 @@ import matplotlib.pyplot as plt
 # %matplotlib inline
 # Make plots look a little bit more fancy
 plt.style.use('fivethirtyeight')
-# Print to 2 decimal places, show tiny values as 0
-np.set_printoptions(precision=2, suppress=True)
+# Print to 4 decimal places, show tiny values as 0
+np.set_printoptions(precision=4, suppress=True)
 import pandas as pd
 ```
 
 If you are running on your laptop, you will need to download the
-[gender_stats.csv](/dsfe2019/data/gender_stats.csv) file to the same
-directory as this notebook.
+[disciplines_SI.xlsx](/dsfe2019/data/disciplines_SI.xlsx) file to the
+same directory as this notebook.
 
-We fetch the data and process it again:
+We read the data and get the columns:
 
 ```{python}
-# Load the data file
-gender_data = pd.read_csv('gender_stats.csv')
-
-# Make new data frame with only MMR and FR
-just_mmr_fr = gender_data[['mat_mort_ratio', 'fert_rate']]
-
-# Drop the NaN values, and make into arrays.
-clean_mmr_fr = just_mmr_fr.dropna()
-mmr = np.array(clean_mmr_fr['mat_mort_ratio'])
-fert = np.array(clean_mmr_fr['fert_rate'])
+# Read the Excel format data file
+ratings = pd.read_excel('disciplines_SI.xlsx')
+# Convert Easiness and Overall Quality measures to arrays.
+easiness = np.array(ratings['Easiness'])
+quality = np.array(ratings['Overall Quality'])
 ```
 
-The function we want to minimize:
+The [using minimize](using_minimize) page has the function we want to minimize:
 
 ```{python}
-def sos_si_error(inter_slope):
-    # inter_slope has two elements, the intercept value, and the slope value
-    intercept = inter_slope[0]
-    slope = inter_slope[1]
-    fitted = intercept + fert * slope
-    error = mmr - fitted
+def ss_any_line(c_s, x_values, y_values):
+    c, s = c_s
+    predicted = c + x_values * s
+    error = y_values - predicted
     return np.sum(error ** 2)
 ```
 
@@ -237,7 +236,7 @@ Find the best intercept and slope:
 
 ```{python}
 from scipy.optimize import minimize
-observed_result = minimize(sos_si_error, [0, 100])
+observed_result = minimize(ss_any_line, [2.25, 0.47], args=(easiness, quality))
 observed_slope = observed_result.x[1]
 observed_slope
 ```
@@ -245,15 +244,15 @@ observed_slope
 This is what we see, in the data we have.
 
 
-What would we see, if we took another random sample of FR and MMR values?  We can't easily do this.  Is there a way we can estimate what this would look like?
+What would we see, if we took another random sample of Easiness and Quality values?  We can't easily do this.  Is there a way we can estimate what this would look like?
 
 
-We return to the permutation trick we used in [Brexit
-ages](../05/brexit_ages).  If there is, in fact, no relationship between MMR
-and FR, then the slope, suggesting an association of MMR and FR, is just
-a result of random sampling.
+We return to the permutation trick we used in [Brexit ages](../05/brexit_ages).
+If there is, in fact, no relationship between Quality and Easiness, then the
+slope, suggesting an association of Quality and Easiness, is just a result of
+random sampling.
 
-We can simulate that random sampling by making a new, fake (FR, MMR) pairing.  We do this by shuffling the MMR (or FR) values, to make the relationship between them random.
+We can simulate that random sampling by making a new, fake (Easiness, Quality) pairing.  We do this by shuffling the Quality (or Easiness) values, to make the relationship between them random.
 
 Then we check what slope we get.
 
@@ -262,22 +261,23 @@ We keep doing this, and keep checking the slope, to build up the *sampling distr
 Then we compare our actual slope to the sampling distribution.  If the actual slope is not a rare value from the sampling distribution, the slope may have come about because of random sampling.  If it is a rare value, random sampling is an unlikely explanation.
 
 ```{python}
-# Store the original MMR values
-actual_mmr = mmr.copy()
+# Make a copy of the quality values
+shuffled_quality = quality.copy()
 ```
 
-Now shuffle the MMR values, to make a fake and random pairing between the FR and MMR values.
+Now shuffle the copy of the Quality values, to make a fake and random pairing between the Easiness and Quality values.
 
 ```{python}
-# Make a fake pairing of FR and MMR, by shuffling MMR
-np.random.shuffle(mmr)
+# Make a fake pairing of Easiness and Quality, by shuffling Quality
+np.random.shuffle(shuffled_quality)
 ```
 
 Use `minimize` to estimate the best-fit slope for this new fake pairing:
 
 ```{python}
 # Estimate the slope for the fake pairing
-fake_result = minimize(sos_si_error, [0, 100])
+fake_result = minimize(ss_any_line, [2.25, 0.47],
+                       args=(easiness, shuffled_quality))
 fake_result.x
 ```
 
@@ -294,8 +294,9 @@ We need to do this many times to build up a good estimate of the sampling distri
 n_samples = 10000
 fake_slopes = np.zeros(n_samples)
 for i in np.arange(n_samples):
-    np.random.shuffle(mmr)
-    fake_slope = minimize(sos_si_error, [0, 100]).x[1]
+    np.random.shuffle(shuffled_quality)
+    fake_inter, fake_slope = minimize(ss_any_line, [2.25, 0.47],
+                                      args=(easiness, shuffled_quality)).x
     fake_slopes[i] = fake_slope
 ```
 
@@ -307,7 +308,8 @@ plt.xlabel('Fake slope values')
 plt.title('Sampling distribution for slope')
 ```
 
-We find the proportion of the sampling distribution that is greater than or equal to the value we saw:
+We find the proportion of the sampling distribution that is greater than or
+equal to the value we saw:
 
 ```{python}
 p = np.count_nonzero(fake_slopes >= observed_slope) / n_samples

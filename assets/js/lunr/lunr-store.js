@@ -279,13 +279,18 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/pandas_indexing",
         "teaser":null},{
+        "title": "7.8 Combining Booleans",
+        "excerpt":"Sometimes we want to be able to combine several different criteria to selectelements from arrays or tables. So far we have used boolean Series and arrays to select rows. This works fine when we have some simple criterion, such as whether the value in the column or array is greater...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/combining_boolean_arrays",
+        "teaser":null},{
         "title": "7.5 Finding lines",
-        "excerpt":"In The Mean and Slopes, we were looking for the best slopeto predict one vector of values from another vector of values. Specifically, we wanted our slope to predict the Maternal Mortality Ratio (MMR) values from the Fertility Rate (FR) values. By analogy with The Mean as Predictor, we decided...","categories": [],
+        "excerpt":"In The Mean and Slopes, we were looking for the best slopeto predict one vector of values from another vector of values. Specifically, we wanted our slope to predict the Packed Cell Volume (PCV)values from the Hemoglobin (HGB) values. By analogy with The Mean as Predictor, we decided to choose...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/finding_lines",
         "teaser":null},{
-        "title": "7.6 Believable slopes",
-        "excerpt":"In finding slopes, we found the line the did the best job of predicting one vector of values from another vector of values. Our line was a slope and an intercept. We used it to predict the Maternal Mortality Ratio (MMR) values from the Fertility Rate (FR) values. We chose...","categories": [],
+        "title": "7.7 Believable slopes",
+        "excerpt":"In finding slopes, we found the line the did the best job of predicting one vector of values from another vector of values. Our line was a slope and an intercept. We used it to predict the OverallQuality scores (quality) for courses, from the Easiness scores (easiness). We chose the...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/inference_on_slopes",
         "teaser":null},{
@@ -308,6 +313,11 @@ var store = [{
         "excerpt":"In The Mean and Slopes, we used a simple but slow way tofind the slope that best predicted one vector of values from another vector ofvalues. First we go back to find that slope. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Make plots look a little bit more fancyplt.style.use('fivethirtyeight')#...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/optimization",
+        "teaser":null},{
+        "title": "7.6 Using minimize",
+        "excerpt":"We have already used the minimize function a few times: from scipy.optimize import minimizeNow we pause to look at how it works, and how best to use it. Let’s go back to the problem from finding lines: # Our usual imports and configuration.import numpy as npimport pandas as pdimport matplotlib.pyplot...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/using_minimize",
         "teaser":null},{
         "title": "7.2 Where and argmin",
         "excerpt":"We sometimes want to know where a value is in an array. import numpy as npBy “where” we mean, which element contains a particular value. Here is an array. arr = np.array([2, 99, -1, 4, 99])arrarray([ 2, 99, -1, 4, 99])As you know, we can get element using their index...","categories": [],
