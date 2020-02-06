@@ -16,4 +16,4 @@ permalink: /classes/class_12
 
 ## Assignment
 
-* Start work on project.
+* Work on project.
