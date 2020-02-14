@@ -239,7 +239,7 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/booleans_and_labels",
         "teaser":null},{
-        "title": "6.2 Conditional statements",
+        "title": "6.5 Conditional statements",
         "excerpt":"Conditional Statements In many situations, actions and results depends on a specific set ofconditions being satisfied. For example, individuals in randomizedcontrolled trials receive the treatment if they have been assigned tothe treatment group. A gambler makes money if she wins her bet. In this section we will learn how to...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/conditional_statements",
@@ -279,6 +279,11 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/pandas_indexing",
         "teaser":null},{
+        "title": "7.10 Correlation",
+        "excerpt":"This page has content from theCorrelationnotebook from the UC Berkeley course. See the Berkeley course section of thelicenseCorrelation In this section we will develop a measure of how tightly clustereda scatter diagram is about a straight line. Formally, this is calledmeasuring linear association. The table hybrid contains data on hybrid...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/Correlation",
+        "teaser":null},{
         "title": "7.8 Combining Booleans",
         "excerpt":"Sometimes we want to be able to combine several different criteria to selectelements from arrays or tables. So far we have used boolean Series and arrays to select rows. This works fine when we have some simple criterion, such as whether the value in the column or array is greater...","categories": [],
         "tags": [],
@@ -313,6 +318,11 @@ var store = [{
         "excerpt":"In The Mean and Slopes, we used a simple but slow way tofind the slope that best predicted one vector of values from another vector ofvalues. First we go back to find that slope. import numpy as npimport matplotlib.pyplot as plt%matplotlib inline# Make plots look a little bit more fancyplt.style.use('fivethirtyeight')#...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/optimization",
+        "teaser":null},{
+        "title": "7.9 Standard scores",
+        "excerpt":"import numpy as np%matplotlib inlineimport matplotlib.pyplot as pltplt.style.use('fivethirtyeight')import pandas as pdDescribing distributions We have seen several examples of distributions. We can describe distributions as having a center, and a spread. In the mean as predictor, we saw that the mean isa useful measure of the center of a distribution. What...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/08/standard_scores",
         "teaser":null},{
         "title": "7.6 Using minimize",
         "excerpt":"We have already used the minimize function a few times: from scipy.optimize import minimizeNow we pause to look at how it works, and how best to use it. Let’s go back to the problem from finding lines: # Our usual imports and configuration.import numpy as npimport pandas as pdimport matplotlib.pyplot...","categories": [],
@@ -353,11 +363,6 @@ var store = [{
         "excerpt":"David Wagner is the primary author of this chapter. Machine learning is a class of techniques for automatically finding patterns in data and using it to draw inferences or make predictions. You have already seen linear regression, which is one kind of machine learning. This chapter introduces a new one:...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/09/classification",
-        "teaser":null},{
-        "title": "8.1 Standard scores",
-        "excerpt":"Describing distributions We have seen several examples of distributions. We can describe distributions as having a center, and a spread. In the mean as predictor, we saw that the mean is a useful measure of the center of a distribution. What measure should we use for the spread? Chronic kidney...","categories": [],
-        "tags": [],
-        "url": "https://matthew-brett.github.io/dsfe2019/chapters/09/standard_scores",
         "teaser":null},{
         "title": "9. The end of the beginning",
         "excerpt":"This is the end of the course. The course is an introduction to data science. Along the way, we hope you learned: Some of the computational tools including thePython language, Jupyter notebooks, Numpy arrays, and Pandas data frames. Some of the statistical techniques, includingsimulation, testing for differences between groups with...","categories": [],

@@ -12,7 +12,7 @@
 <meta property="og:locale" content="en_UK">
 <meta property="og:site_name" content="Data science for everyone - 2019">
 <meta property="og:title" content="Data science for everyone - 2019">
-<meta property="og:url" content="https://matthew-brett.github.io/dsfe2019/notebooks/09/standard_scores.Rmd">
+<meta property="og:url" content="https://matthew-brett.github.io/dsfe2019/notebooks/08/standard_scores.Rmd">
 
 
 
@@ -30,7 +30,7 @@
   
 
 
-<link rel="canonical" href="https://matthew-brett.github.io/dsfe2019/notebooks/09/standard_scores.Rmd">
+<link rel="canonical" href="https://matthew-brett.github.io/dsfe2019/notebooks/08/standard_scores.Rmd">
 
 
 
@@ -182,7 +182,6 @@
       <section class="page__content" itemprop="text">
         
         ```{python}
-# HIDDEN
 import numpy as np
 # %matplotlib inline
 import matplotlib.pyplot as plt
@@ -196,25 +195,24 @@ We have seen several examples of *distributions*.
 
 We can describe distributions as having a *center*, and a *spread*.
 
-In [the mean as predictor](../08/mean_meaning), we saw that the mean is a useful measure of the center of a distribution.
+In [the mean as predictor](mean_meaning), we saw that the mean is
+a useful measure of the center of a distribution.
 
 What measure should we use for the spread?
 
-## Chronic kidney disease
+## Back to chronic kidney disease
 
-We're going to work with a data set that was collected to help doctors diagnose chronic kidney disease (CKD).  Each row in the data set represents a single patient who was treated in the past and whose diagnosis is known.  For each patient, we have a bunch of measurements from a blood test.
+We return to the [data on chronic kidney disease](/dsfe2019/data/chronic_kidney_disease).
 
-You will see more of this dataset soon.
-
-If you are running on your laptop, you should download the
-[ckd.csv](/dsfe2019/data/ckd.csv) file to the same
-directory as this notebook.
+Download the data to your computer via this link: [ckd_clean.csv](/dsfe2019/data/ckd_clean.csv).
 
 ```{python}
-ckd_full = pd.read_csv('ckd.csv')
+ckd_full = pd.read_csv('ckd_clean.csv')
 ckd_full.head()
 ```
-We will use this dataset to get a couple of variables (columns) and therefore a couple of distributions.
+
+We will use this dataset to get a couple of variables (columns) and
+therefore a couple of distributions.
 
 Let's start with the White Blood Cell Count, usually abbreviated as WBC.
 
@@ -240,10 +238,23 @@ plt.title('Hemoglobin');
 hgb.describe()
 ```
 
-Notice that we can't easily plot these two on the same axes, because their units are so different.
+Notice that we can't easily plot these two on the same axes, because
+their units are so different.
 
 
-We could try and fix this by subtracting the mean, as a center value, so the values are now *deviations* from the mean.
+Here's what that looks like.  Notice that the hemoglobin values disappear in a tiny spike to the left.
+
+```{python}
+# Use alpha to make the histograms a little transparent.
+# Label them for a legend.
+hgb.hist(alpha=0.7, label='HGB')
+wbc.hist(alpha=0.7, label='WBC')
+plt.title("HGB and WBC together - HGB tiny spike at left")
+plt.legend();
+```
+
+We could try and fix this by subtracting the mean, as a center value, so
+the values are now *deviations* from the mean.
 
 ```{python}
 wbc_deviations = wbc - np.mean(wbc)
@@ -257,24 +268,38 @@ hgb_deviations.hist()
 plt.title('Hemoglobin deviations');
 ```
 
-The deviations each have a mean very very close to zero, and therefore, they have the same center:
+The deviations each have a mean very very close to zero, and therefore,
+they have the same center:
 
 ```{python}
 np.mean(wbc_deviations), np.mean(hgb_deviations)
 ```
 
-We still cannot plot them on the same axes, because the WBC values have a very different *spread*.  They will completely dominate the x axis of the graph.  We can't reasonably compare the WBC deviations to the Hemoglobin deviations, because they have such different units.
+We still cannot sensibly plot them on the same axes, because the WBC values have
+a very different *spread*.  The WBC values completely dominate the x axis of
+the graph.  We can't reasonably compare the WBC deviations to the
+Hemoglobin deviations, because they have such different *units*.
 
+```{python}
+hgb_deviations.hist(alpha=0.7, label='HGB')
+wbc_deviations.hist(alpha=0.7, label='WBC')
+plt.title("HGB and WBC deviations - you can't see HGB")
+plt.legend();
+```
 
-We would like a measure of the spread of the distribution, so we can set the two distributions to have the same spread.
+We would like a measure of the spread of the distribution, so we can set
+the two distributions to have the same spread.
 
 
 ## The standard deviation
 
 
-In the [mean as predictor](../08/mean_meaning) section, we found that mean was the best value to use as a predictor, to minimize the sum of *squared* deviations.
+In the [mean as predictor](mean_meaning) section, we found that mean was
+the best value to use as a predictor, to minimize the sum of *squared*
+deviations.
 
-Maybe we could get an idea of the typical *squared* deviation, as a measure of spread?
+Maybe we could get an idea of the typical *squared* deviation, as
+a measure of spread?
 
 ```{python}
 hgb_deviations[:10]
@@ -297,14 +322,17 @@ hgb_dev_sq_mean = np.mean(hgb_dev_sq)
 hgb_dev_sq_mean
 ```
 
-This is the *mean squared deviation*.  This is also called the *variance*.  Numpy has a function to calculate that in one shot:
+This is the *mean squared deviation*.  This is also called the
+*variance*.  Numpy has a function to calculate that in one shot:
 
 ```{python}
 # The mean squared deviation is the variance
 np.var(hgb)
 ```
 
-The mean squared deviation is a good indicator of the typical squared deviation.  What should we use for some measure of the typical deviation?
+The mean squared deviation is a good indicator of the typical squared
+deviation.  What should we use for some measure of the typical
+deviation?
 
 We could take the square root of the mean squared deviation, like this:
 
@@ -312,7 +340,8 @@ We could take the square root of the mean squared deviation, like this:
 np.sqrt(hgb_dev_sq_mean)
 ```
 
-This is a measure of the spread of the distribution.  It is a measure of the typical or average deviation.
+This is a measure of the spread of the distribution.  It is a measure of
+the typical or average deviation.
 
 It is also called the *standard deviation*.
 
@@ -320,9 +349,13 @@ It is also called the *standard deviation*.
 np.std(hgb)
 ```
 
-We can make our distribution have a standard center *and* a standard spread by dividing our mean-centered distribution, by the standard deviation.  Then the distribution will have a standard deviation very close to 1.
+We can make our distribution have a standard center *and* a standard
+spread by dividing our mean-centered distribution, by the standard
+deviation.  Then the distribution will have a standard deviation very
+close to 1.
 
-This version of the distribution, with mean 0 and standard deviation of 1, is called the *standardized* distribution.
+This version of the distribution, with mean 0 and standard deviation of
+1, is called the *standardized* distribution.
 
 ```{python}
 standardized_hgb = hgb_deviations / np.std(hgb)
@@ -343,7 +376,8 @@ std_hgb_again.hist()
 plt.title('Standardized Hemoglobin, again')
 ```
 
-If we do the same to the WBC, we can compare values of the distributions:
+If we do the same to the WBC, we can compare values of the
+distributions:
 
 ```{python}
 std_wbc = standard_units(wbc)
@@ -351,7 +385,17 @@ std_wbc.hist()
 plt.title('Standardized White Blood Cell Count')
 ```
 
-Every value in standardized units gives the deviation of the original value from its mean, in terms of the number of standard deviations.
+Now we can put both these distributions on the same graph, to compare them directly.
+
+```{python}
+std_hgb_again.hist(alpha=0.7, label='HGB')
+std_wbc.hist(alpha=0.7, label='WBC')
+plt.title('Standardized HGB and WBC')
+plt.legend()
+```
+
+Every value in standardized units gives the deviation of the original
+value from its mean, in terms of the number of standard deviations.
 
         
       </section>
