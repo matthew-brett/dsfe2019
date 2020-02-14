@@ -36,3 +36,4 @@ permalink: /classes
 | 2    |  24 Jan    | [class 10](classes/class_10) |
 | 3    |  31 Jan    | [class 10](classes/class_11) |
 | 4    |  7 Feb     | [class 11](classes/class_12) |
+| 5    |  14 Feb    | [class 12](classes/class_13) |
