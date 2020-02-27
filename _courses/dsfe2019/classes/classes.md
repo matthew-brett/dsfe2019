@@ -34,6 +34,8 @@ permalink: /classes
 | ---- | ---------- | ---------------------------- |
 | 1    |  17 Jan    | [class 9](classes/class_9)   |
 | 2    |  24 Jan    | [class 10](classes/class_10) |
-| 3    |  31 Jan    | [class 10](classes/class_11) |
-| 4    |  7 Feb     | [class 11](classes/class_12) |
-| 5    |  14 Feb    | [class 12](classes/class_13) |
+| 3    |  31 Jan    | [class 11](classes/class_11) |
+| 4    |  7 Feb     | [class 12](classes/class_12) |
+| 5    |  14 Feb    | [class 13](classes/class_13) |
+| 6    |  21 Feb    | Reading week                 |
+| 7    |  28 Feb    | [class 14](classes/class_14) |

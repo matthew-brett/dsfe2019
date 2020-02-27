@@ -8,19 +8,14 @@ permalink: /classes/class_14
 
 ## Announcements
 
-* Reading week next week;
 * Another reminder about the [project schedule](../project);
-* More on the [project](../project);
-* The [project rubric](../projects/rubric).
 
 ## Schedule
 
-*   [Workflow](../projects/workflow).
-*   [Conditional statements](../chapters/07/conditional_statements)
-*   [The mean as a predictor](../chapters/08/mean_meaning)
+* [Data frames, series and arrays](../chapters/04/df_series_arrays)
+* [Brexit analysis exercise](../exercises/brexiteering.zip)
+* [Populations, permutations](../chapters/05/population_permutation)
 
 ## Assignment
 
-*   [Conditional statement
-    exercises](../chapters/exercises/conditional_statements_exercises)
-*   Project work.
+TBA

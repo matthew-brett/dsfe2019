@@ -10,7 +10,6 @@ permalink: /classes/class_13
 
 * [Filling arrays](../chapters/03/filling_arrays)
 * [Three girl simulations exercise](../exercises/three_girls.zip)
-* [Data frames, series and arrays](../chapters/04/df_series_arrays)
 
 ## Assignment
 
