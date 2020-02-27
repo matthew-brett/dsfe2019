@@ -7,6 +7,7 @@ from collections import namedtuple
 import yaml
 from nbclean import NotebookCleaner
 import nbformat as nbf
+import nbconvert as nbc
 from tqdm import tqdm
 import numpy as np
 from glob import glob
@@ -16,6 +17,9 @@ import argparse
 
 from jinja2 import Template
 
+from traitlets.config import Config
+from nbconvert.writers import FilesWriter
+from nbconvert.preprocessors.execute import executenb
 
 CONTENT_EXTS = ('.ipynb', '.md', '.Rmd')
 
@@ -51,20 +55,6 @@ def _strip_suffixes(string, suffixes=None):
     for suff in suffixes:
         string = string.replace(suff, '')
     return string
-
-
-def _clean_notebook_cells(path_ntbk):
-    """Clean up cell text of an nbformat NotebookNode."""
-    ntbk = nbf.read(path_ntbk, nbf.NO_CONVERT)
-    # Remove '#' from the end of markdown headers
-    for cell in ntbk.cells:
-        if cell.cell_type == "markdown":
-            cell_lines = cell.source.split('\n')
-            for ii, line in enumerate(cell_lines):
-                if line.startswith('#'):
-                    cell_lines[ii] = line.rstrip('#').rstrip()
-            cell.source = '\n'.join(cell_lines)
-    nbf.write(ntbk, path_ntbk)
 
 
 def _between_symbols(string, c1, c2):
@@ -292,8 +282,10 @@ class SiteBuilder:
         self._proc_out_nb(out_path)
         return op.sep.join([out_dir, op.basename(link)])
 
-    def _nb2md(self, nb_fname, out_folder):
-        # Run nbconvert moving it to the output folder
+    def _nb2md(self, nb, out_folder, out_base):
+        """Run nbconvert on notebook, output to the output folder
+        """
+
         """ Consider adding field to site config with script name
         to be run when executing notebook, and then.
 
@@ -303,38 +295,75 @@ class SiteBuilder:
         * Remove first cell and renumber inputs / outputs.
         * Convert to markdown with given template etc
         """
-        # This is the output directory for `.md` files
-        build_call = '--FilesWriter.build_directory={}'.format(out_folder)
-        # This is where images go - remove the _ so Jekyll will copy them
-        # over
-        images_call = '--NbConvertApp.output_files_dir={}'.format(
-            op.join(self.images_folder, out_folder.lstrip('_')))
-        call = ['jupyter', 'nbconvert', '--log-level="CRITICAL"',
-                '--to', 'markdown', '--template', self.template_path,
-                images_call, build_call, nb_fname]
-        if self.execute is True:
-            call.insert(-1, '--execute')
-        check_call(call)
+        c = Config()
+        c.Application.log_level = 'CRITICAL'
+        md_exporter = nbc.MarkdownExporter(config=c)
+        md_exporter.template_file = self.template_path
+        # Image output path - remove _ so Jekyll will copy them over
+        out_files_dir = op.join(self.images_folder, out_folder.lstrip('_'))
+        # Set base name via unique_key as seed for resources dict.
+        body, resources = md_exporter.from_notebook_node(
+            nb, resources= {'unique_key': out_base,
+                            'output_files_dir': out_files_dir})
+        c.FilesWriter.build_directory = out_folder
+        FilesWriter(config=c).write(body, resources, notebook_name=out_base)
 
     def _process_notebook(self, link, new_folder):
-        # Create a temporary version of the notebook we can modify
         site_yaml = self.site_yaml
-        tmp_notebook = link + '_TMP'
-        sh.copy2(link, tmp_notebook)
-
+        nb = nbf.read(link, nbf.NO_CONVERT)
+        if self.execute:
+            nb = executenb(nb, cwd=op.dirname(link))
         # Clean up the file before converting
-        cleaner = NotebookCleaner(tmp_notebook)
+        cleaner = NotebookCleaner(nb)
         cleaner.remove_cells(empty=True)
         if site_yaml.get('hide_cell_text', False):
             cleaner.remove_cells(search_text=site_yaml.get('hide_cell_text'))
         if site_yaml.get('hide_code_text', False):
-            cleaner.clear(kind="content", search_text=site_yaml.get('hide_code_text'))
-        cleaner.clear('stderr')
-        cleaner.save(tmp_notebook)
-        _clean_notebook_cells(tmp_notebook)
+            cleaner.clear(kind="content",
+                          search_text=site_yaml.get('hide_code_text'))
+        nb = cleaner.ntbk
+        # Beware! By default, this cleans warnings etc from the output.
+        # Set metadata in notebook YaML to allow stderr.
+        if not nb['metadata'].get('jupyterbook', {}).get('show_stderr', False):
+            cleaner.clear('stderr')
+        self._process_nb_for_md(nb)
         # Convert notebook to markdown
-        self._nb2md(tmp_notebook, new_folder)
-        os.remove(tmp_notebook)
+        out_base, _ = op.splitext(op.basename(link))
+        self._nb2md(nb, new_folder, out_base)
+
+    def _process_nb_for_md(self, nb):
+        """ Process markdown from (possibly executed) notebook `nb`
+        """
+        self._clean_md_headers(nb)
+        self._strip_tracebacks(nb)
+
+    def _clean_md_headers(self, nb):
+        """Clean up cell text of an nbformat NotebookNode."""
+        # Remove '#' from the end of markdown headers
+        for cell in nb.cells:
+            if cell.cell_type == "markdown":
+                cell_lines = cell.source.split('\n')
+                for ii, line in enumerate(cell_lines):
+                    if line.startswith('#'):
+                        cell_lines[ii] = line.rstrip('#').rstrip()
+                cell.source = '\n'.join(cell_lines)
+
+    def _strip_tracebacks(self, nb):
+        # Strip error traceback to first, last line
+        for cell in nb.cells:
+            if cell['cell_type'] != 'code' or 'outputs' not in cell:
+                continue
+            for output in cell['outputs']:
+                if (output['output_type'] != 'error' or
+                    'traceback' not in output):
+                    continue
+                tb = output['traceback']
+                if len(tb) == 1:
+                    # Syntax errors don't have multiline tracebacks.
+                    assert ('SyntaxError' in tb[0] or
+                            'IndentationError' in tb[0])
+                    continue
+                tb[:] = ['\n'.join([tb[1], '   ...', tb[-1]])]
 
     def _write_out_md(self,
                       link,

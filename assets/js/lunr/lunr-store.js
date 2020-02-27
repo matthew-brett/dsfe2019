@@ -244,15 +244,20 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/conditional_statements",
         "teaser":null},{
-        "title": "6.1 Functions in more detail",
+        "title": "6.3 Functions in more detail",
         "excerpt":"Functions We have already used functions. For example, we have used the round function: a = 3.1415# Call the \"round\" functionb = round(a, 2)b3.14We often need to define our own functions. Before we do, we need to go intomore detail about what functions are for, and what they are. Functions...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/functions",
         "teaser":null},{
-        "title": "6.1 Functions as values",
+        "title": "6.4 Functions as values",
         "excerpt":"In the introduction to functions, we introduced themetaphor of a function being a recipe. It is a procedure, thataccepts inputs, (the ingredients of the recipe), and returns an output(the meal from the recipe). A function, like a recipe, usually hasa name. def add(a, b): return a + bAs we saw...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/functions_as_values",
+        "teaser":null},{
+        "title": "Gory Pandas",
+        "excerpt":"Gory Pandas This notebook is about the difficult, painful, maybe even bloody subject ofviews and copies when using Pandas. You don’t need to fully understand the results on this page to use Pandaseffectively. This page is only to point out that you have to use the resultsof Pandas indexing with...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/gory_pandas",
         "teaser":null},{
         "title": "6.1 Introduction to functions",
         "excerpt":"This page is from the equivalentpage in the excellentintroduction to Python by EricMatthes. The original page has an MITlicense. Introducing Functions One of the core principles of any programming language is, “Don’t Repeat Yourself”. If you have an action that should occur many times, you can define that action once...","categories": [],
@@ -274,10 +279,30 @@ var store = [{
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/none",
         "teaser":null},{
+        "title": "6.10 Numbers and strings",
+        "excerpt":"This page covers a common problem when loading data into Pandas — when Pandas gets confused about whether values in a column are text or numbers. An example import numpy as npimport pandas as pdpd.set_option('mode.chained_assignment','raise')We return to the example data file that you may have seen in the text encoding...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/numbers_and_strings",
+        "teaser":null},{
         "title": "6.6 Indexing in Pandas",
         "excerpt":"Way back in the introduction to data frames, we covered indexing into data frames withBoolean vectors, such as Pandas Series or Numpy arrays, and indexing into data frames with column names. This page covers more sophisticated indexing in Pandas. To understand this indexing, we first need to cover the index...","categories": [],
         "tags": [],
         "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/pandas_indexing",
+        "teaser":null},{
+        "title": "Pandas indexing reprise",
+        "excerpt":"Pandas indexing reprise This page is a reminder on indexing for Pandas data frames and Series. You have already seen the basics of Pandas indexing; this page is just a reminder of the laterparts of the basic indexing page. import pandas as pdWe use the familiar dataset on student ratings...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/pandas_indexing_reprise",
+        "teaser":null},{
+        "title": "6.8 Safe Pandas",
+        "excerpt":"A lot of Pandas’ design is for speed and efficiency. Unfortunately, this sometimes means that is it easy to use Pandas incorrectly, and so get results that you do not expect. This page has some rules we suggest you follow to stay out of trouble when using Pandas. As your...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/safe_pandas",
+        "teaser":null},{
+        "title": "6.9 Text encoding",
+        "excerpt":"Various things can go wrong when you import your data into Pandas. Some of these are immediately obvious; others only appear later, in confusing forms. This page covers one common problem when loading data into Pandas — text encoding. Pandas and encoding import numpy as npimport pandas as pdpd.set_option('mode.chained_assignment','raise')Consider the...","categories": [],
+        "tags": [],
+        "url": "https://matthew-brett.github.io/dsfe2019/chapters/07/text_encoding",
         "teaser":null},{
         "title": "7.10 Correlation",
         "excerpt":"This page has content from theCorrelationnotebook from the UC Berkeley course. See the Berkeley course section of thelicenseCorrelation In this section we will develop a measure of how tightly clustereda scatter diagram is about a straight line. Formally, this is calledmeasuring linear association. The table hybrid contains data on hybrid...","categories": [],
