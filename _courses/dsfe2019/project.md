@@ -153,8 +153,8 @@ These are provisional, except for the "Projects due" deadline.
 | 3    | 31 Jan     | Data pitches 2            |
 | 4    |  7 Feb     | Teams finalized           |
 | 8    |  6 Mar     | Progress reports          |
-| 10   | 20 Mar     | Presentations             |
-| 11   | 28 Mar     | Projects due              |
+| 11   | 25 Mar     | Presentations             |
+| 12   | 4 Apr      | Projects due              |
 
 ## Progress report
 
