@@ -39,3 +39,5 @@ permalink: /classes
 | 5    |  14 Feb    | [class 13](classes/class_13) |
 | 6    |  21 Feb    | Reading week                 |
 | 7    |  28 Feb    | [class 14](classes/class_14) |
+| 8    |  6 Mar     | Progress reports             |
+| 11   |  27 Mar    | [class 15](classes/class_15) |

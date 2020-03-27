@@ -14,7 +14,6 @@ permalink: /classes/class_14
 
 * [Data frames, series and arrays](../chapters/04/df_series_arrays)
 * [Brexit analysis exercise](../exercises/brexiteering.zip)
-* [Populations, permutations](../chapters/05/population_permutation)
 
 ## Assignment
 
