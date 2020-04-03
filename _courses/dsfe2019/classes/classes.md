@@ -41,3 +41,4 @@ permalink: /classes
 | 7    |  28 Feb    | [class 14](classes/class_14) |
 | 8    |  6 Mar     | Progress reports             |
 | 11   |  27 Mar    | [class 15](classes/class_15) |
+| 12   |  3 Apr     | [class 16](classes/class_16) |
